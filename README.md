@@ -1,11 +1,11 @@
 # Loft Environment Monitor Sensor Data Collector
 > An Arduino Nano sketch (and libraries) to log temperature, humidity and light level data in my loft.
 
-So, I have a Server, several NAS's, 2x UPS's and a lot of network kit in my loft. I also have a ton of other real junk, but that is not so interesting. Anyway, in the Winter, my loft (or my mini datacentre, as my friends call it) really does not have a temperature problem, but in the Summer it can get really hot, hot enough for me to power down all my kit just as a precaution.
+So, I have a Server, several NAS's, 2x UPS's and a lot of network kit in my loft. I also have a ton of other real junk, but that is not so interesting. Anyway, in the Winter, my loft (or my mini datacentre, as my friends call it) really does not have a temperature problem, but in the Summer it can get really hot - hot enough for me to power down all my kit just as a precaution.
 
-Then, recently I discovered the Arduino, and eventually I have gained enough knowledge and experience to think about using an Arduino to monitor the environment in my loft. However, what temperature sensor would be the best, what temperature sensors were there, and how did they compare?
+Then, recently I discovered the Arduino (what a marvel), and eventually I have gained enough knowledge and experience to think about using an Arduino to monitor the environment in my loft. However, what temperature sensor would be the best, what temperature sensors were there, and how do they compare?
 
-This project is built on an Arduino Nano (cheap, breadboard friendly) and has a total of 7x temperature sensors, 3x humdity sensors, and 1x light sensor (because I thought it might be useful too). It also has 5x LEDs that give a rough indication of what the temperature is.
+This project is built on an Arduino Nano (cheap, breadboard friendly, virtually disposable) and has a total of 7x temperature sensors, 3x humdity sensors, and 1x light sensor (because I thought it might be useful too). It also has 5x LEDs that give a rough indication of what the temperature is.
 
 **Temperature/Humidity Sensors**
 - BME280 sensor: Digital, best specifications, prone to self-heating.
@@ -36,19 +36,19 @@ In realtime, I can look at the log to get the information, or just look at the L
 
 In time, I will analyse the capured data (using LibreCalc), looking at the cycles, and comparing and contrasting the readings from the many sensors. I expect that I will settle on just 1 or 2 sensors and then harden the build. Eventually I will use some of the spare digital outputs to control fans and things like that.
 
-An example "blob" of captured data can be studied [here](LoftMon20210111-1.csv).
+An example "blob" of example captured data can be studied [here](LoftMon20210111-1.csv).
 
 I should also be able to automate some alerting. A simple python script running on the server could easily read the log, and send me an email if it spots whatever I want it to spot.
 
 ![](My-Loft-Environment-Monitor.png)
 
 ## Installation
-1. Create an Arduino sketch folder ``Loft-Monitor``.
+1. Create an Arduino sketch folder called ``Loft-Monitor``.
 2. Copy ``Loft-Monitor.ino`` into the sketch folder just created.
 3. Fire up the Arduino IDE, and install the pre-requesite libraries (as necessary).
 4. Open the ``Loft-Monitor.ino`` sketch and enable/disable the sensors and features you want.
-5. Compile and download to your Arduino Nano.
-6. Capture data with a serial comms app you like. I am using [CoolTerm](http://freeware.the-meiers.org/).
+5. Compile and download the code to your Arduino Nano.
+6. Capture the environment data with a serial comms app you like. I like and use [CoolTerm](http://freeware.the-meiers.org/).
 
 ## Usage Example
 ![](Loft-Monitor-v101-CompileDownload.png)
@@ -56,7 +56,7 @@ I should also be able to automate some alerting. A simple python script running 
 ![](CoolTerm-DataCapture.png)
 
 ## Pre-Requesites
-As is normal for most Arduino sketches, several libraries must be included in the sketch to easily access the various sensors.
+As is common for most Arduino sketches, several libraries must be included in the sketch to easily access the various sensors.
 
 ```
 #include <Wire.h>              //Required for I2C bus access.
@@ -79,19 +79,21 @@ As is normal for most Arduino sketches, several libraries must be included in th
     * ADD : None.
 
 ## Meta Data
-Ian Neill – [LinkedIn](https://www.linkedin.com/in/ianneill/) – *arduino@binaria.co.uk*
+Ian Neill – [LinkedIn](https://www.linkedin.com/in/ianneill/) – Email: *arduino@binaria.co.uk*
 
 Distributed under the [GPLv3](license.txt) license. See ``LICENSE`` for more information.
 
 [https://github.com/ilneill/Loft-Monitor](https://github.com/ilneill/Loft-Monitor)
 
 ## Contributing
-Simple (I like simple)... Send me an email – *arduino@binaria.co.uk*
+Simple (I like simple)... Send me an email – Email: *arduino@binaria.co.uk*
 
 ## Thanks To
-**Sketch**: Too many Internet resources to mention. Researched significant ones referenced in the sketch comments.
-**Libraries**: Again, many Internet resources. References in the library code comments.
+**Sketch**: Too many Internet resources to mention. Researched significant ones are referenced in the sketch comments.
+**Libraries**: Again, many Internet resources. References are in the library code comments.
 
 **This README**: [Dan Bader's GitHub README Blog](https://dbader.org/blog/write-a-great-readme-for-your-github-project) (Quite an interesting read, actually!)
+
 **MarkDown Editor**: [Dillinger](https://dillinger.io/) (Really, a very useful website!)
+
 //EOF
