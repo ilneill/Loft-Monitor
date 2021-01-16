@@ -1,0 +1,39 @@
+###########################################
+# Syntax Coloring Map for the
+#                  Voltage Divider Library
+#
+# (c) 2020-2021 Ian Neill,
+#               arduino@binaria.co.uk
+###########################################
+
+###########################################
+# Header Files (KEYWORD1)
+###########################################
+
+VDivider	KEYWORD1
+
+###########################################
+# Datatypes (KEYWORD1)
+###########################################
+
+vDivider	KEYWORD1
+
+###########################################
+# Methods and Functions (KEYWORD2)
+###########################################
+
+vDivCount	KEYWORD2
+setConsts	KEYWORD2
+readADC	KEYWORD2
+calcVOut	KEYWORD2
+calcR1	KEYWORD2
+calcR2	KEYWORD2
+calcR1x	KEYWORD2
+calcR2x	KEYWORD2
+
+###########################################
+# Constants and Variables (LITERAL1)
+###########################################
+
+analogPin	LITERAL1
+

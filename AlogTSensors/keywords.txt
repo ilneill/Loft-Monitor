@@ -1,0 +1,43 @@
+###########################################
+# Syntax Coloring Map for the
+#        Analog Temperature Sensor Library
+#
+# (c) 2020-2021 Ian Neill,
+#               arduino@binaria.co.uk
+###########################################
+
+###########################################
+# Header Files (KEYWORD1)
+###########################################
+
+AlogTSensors	KEYWORD1
+
+###########################################
+# Datatypes (KEYWORD1)
+###########################################
+
+TMP36	KEYWORD1
+MF52D	KEYWORD1
+KY013	KEYWORD1
+Thermistor	KEYWORD1
+
+###########################################
+# Methods and Functions (KEYWORD2)
+###########################################
+
+setParms	KEYWORD2
+setCBeta	KEYWORD2
+setC123	KEYWORD2
+readTemperatureC	KEYWORD2
+readTemperatureK	KEYWORD2
+readTemperatureF	KEYWORD2
+
+###########################################
+# Constants and Variables (LITERAL1)
+###########################################
+
+analogPin	LITERAL1
+S_TMP36	LITERAL1
+S_KY013	LITERAL1
+S_MF52D	LITERAL1
+
