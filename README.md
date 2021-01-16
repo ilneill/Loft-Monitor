@@ -1,9 +1,9 @@
 # Loft Environment Monitor Sensor Data Collector
-> An Arduino Nano sketch (and libraries) to log temperature, humidity and light level data in my loft.
+> An Arduino Nano sketch (and libraries) to log the temperature, humidity and light level data in my loft.
 
 So, I have a Server, several NAS's, 2x UPS's and a lot of network kit in my loft. I also have a ton of other real junk, but that is not so interesting. Anyway, in the Winter, my loft (or my mini datacentre, as my friends call it) really does not have a temperature problem, but in the Summer it can get really hot - hot enough for me to power down all my kit just as a precaution.
 
-Then, recently I discovered the Arduino (what a marvel), and eventually I have gained enough knowledge and experience to think about using an Arduino to monitor the environment in my loft. However, what temperature sensor would be the best, what temperature sensors were there, and how do they compare?
+Then, recently I discovered (many thanks Adrian) the Arduino (what an absolute marvel), and eventually I have gained enough knowledge and experience to be able to use an Arduino to monitor the environment in my loft. However, what environment sensor would be the best, what environment sensors are there, and how do they compare?
 
 This project is built on an Arduino Nano (cheap, breadboard friendly, virtually disposable) and has a total of 7x temperature sensors, 3x humdity sensors, and 1x light sensor (because I thought it might be useful too). It also has 5x LEDs that give a rough indication of what the temperature is.
 
