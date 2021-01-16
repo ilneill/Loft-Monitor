@@ -21,7 +21,7 @@ This project is built on an Arduino Nano (cheap, breadboard friendly, virtually 
 **Light Sensors**
 - LDR sensor: Analog, unknown specifications, unknown response, but easy to work with.
 
-The various data readings are output as CSV at a rate of 4x readings per minute, but this, and almost everything, is configurable. This data is captured via USB by a handy Serial Console program called [CoolTerm](http://freeware.the-meiers.org/), and it is configured to timestamp each line as it is received and logged to disc. I have just left this running...
+The various data readings are output as CSV at a rate of 4x readings per minute, but this, and almost everything, is configurable. This data is captured via USB by a handy Serial Console program called [CoolTerm](http://freeware.the-meiers.org/), and it is [configured](ComPort4.stc) to timestamp each line as it is received and logged to disc. I have just left this running...
 
 In realtime, I can look at the log to get the information, or just look at the LEDs to get a rough idea of what the temperature in my loft/datacentre is.
 
@@ -34,11 +34,11 @@ In realtime, I can look at the log to get the information, or just look at the L
 - Band 1: Blue + White = -25 --> -15 deg C
 - Band 0: Blue + White(F) = less than -25 deg C
 
-In time, I will analyse the capured data (using LibreCalc), looking at the cycles, and comparing and contrasting the readings from the many sensors. I expect that I will settle on just 1 or 2 sensors and then harden the build. Eventually I will use some of the spare digital outputs to control fans and things like that.
+In time, I will analyse the capured data (using LibreCalc), looking at the cycles and trends, and comparing and contrasting the readings from the many sensors. I expect that I will settle on just 1 or 2 sensors and then harden the build. Eventually I will use some of the spare digital outputs to control fans and things like that.
 
-An example "blob" of example captured data can be studied [here](LoftMon20210111-1.csv).
+An example "blob" of captured data can be studied [here](LoftMon20210111-1.csv).
 
-I should also be able to automate some alerting. A simple python script running on the server could easily read the log, and send me an email if it spots whatever I want it to spot.
+I should also be able to automate some basic alerting. For example, a simple python script running on the server could easily read the log, and send me an email if it spots whatever I want it to spot.
 
 ![](My-Loft-Environment-Monitor.png)
 
