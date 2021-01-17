@@ -5,8 +5,8 @@ Loft Environment Monitor Sensor Data Collector - Sensor Trial and Study.
 Licence: GPLv3
 
   Temperature/Humidity Sensors
-  - BME280 sensor : Digital, best specifications, prone to self-heating.
-  - DHT11 sensor  : Digital, curiosity, poor specifications.
+  - BME280 sensor : Digital, best specifications, but prone to self-heating.
+  - DHT11 sensor  : Digital, curiosity, poor specifications, but I had it to hand.
   - DHT22 sensor  : Digital, improved specifications over DHT11, but slower sampling.
   Temperature Sensors
   - DS18B20 sensor: Digital, good specifications, and on a long lead.
