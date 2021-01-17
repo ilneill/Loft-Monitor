@@ -3,13 +3,13 @@
 
 So, I have a Server, several NAS's, 2x UPS's and a lot of network kit in my loft. I also have a ton of other real junk, but that is not so interesting. Anyway, in the Winter, my loft (or my mini datacentre, as my friends call it) really does not have a temperature problem, but in the Summer it can get really hot - hot enough for me to power down all my kit just as a precaution.
 
-Then, recently I discovered (many thanks Adrian) the Arduino (what an absolute marvel), and eventually I have gained enough knowledge and experience to be able to use an Arduino to monitor the environment in my loft. However, what environment sensor would be the best, what environment sensors are there, and how do they compare?
+Then, last year, I discovered (many thanks Adrian) the Arduino (what an absolute marvel), and eventually I gained enough knowledge and experience to be able to build, programm and use an Arduino to monitor the environment in my loft. However, what environment sensor is the best, what environment sensors are there, and how do they compare?
 
-This project is built on an Arduino Nano (cheap, breadboard friendly, virtually disposable) and has a total of 7x temperature sensors, 3x humdity sensors, and 1x light sensor (because I thought it might be useful too). It also has 5x LEDs that give a rough indication of what the temperature is.
+This project is built using an Arduino Nano (cheap, breadboard friendly, virtually disposable) and has a total of 7x temperature sensors, 3x humdity sensors, and 1x light sensor (because I thought it might be useful too). It also has 5x LEDs that give a rough indication of what the temperature is.
 
 **Temperature/Humidity Sensors**
-- BME280 sensor: Digital, best specifications, prone to self-heating.
-- DHT11 sensor: Digital, curiosity, poor specifications.
+- BME280 sensor: Digital, best specifications, but prone to self-heating.
+- DHT11 sensor: Digital, curiosity, poor specifications, but I had it to hand.
 - DHT22 sensor: Digital, improved specifications over DHT11, but slower sampling.
 
 **Temperature Sensors**
@@ -21,7 +21,7 @@ This project is built on an Arduino Nano (cheap, breadboard friendly, virtually 
 **Light Sensors**
 - LDR sensor: Analog, unknown specifications, unknown response, but easy to work with.
 
-The various data readings are output as CSV at a rate of 4x readings per minute, but this, and almost everything, is configurable. This data is captured via USB by a handy Serial Console program called [CoolTerm](http://freeware.the-meiers.org/), and it is [configured](ComPort4.stc) to timestamp each line as it is received and logged to disc. I have just left this running...
+The various data readings are output as text or CSV at a rate of 4x readings per minute, but this, and almost everything, is configurable. I am capturing the data as CSV via USB, with a handy Serial Console program called [CoolTerm](http://freeware.the-meiers.org/). It is [configured](ComPort4.stc) to timestamp each line as it is received and logged to disc. I have just left this running...
 
 In realtime, I can look at the log to get the information, or just look at the LEDs to get a rough idea of what the temperature in my loft/datacentre is.
 
@@ -36,26 +36,35 @@ In realtime, I can look at the log to get the information, or just look at the L
 
 In time, I will analyse the capured data (using LibreCalc), looking at the cycles and trends, and comparing and contrasting the readings from the many sensors. I expect that I will settle on just 1 or 2 sensors and then harden the build. Eventually I will use some of the spare digital outputs to control fans and things like that.
 
-An example "blob" of captured data can be studied [here](LoftMon20210111-1.csv).
+An example "blob" of captured CSV data can be studied [here](LoftMon20210111-1.csv).
 
 I should also be able to automate some basic alerting. For example, a simple python script running on the server could easily read the log, and send me an email if it spots whatever I want it to spot.
 
 ![](My-Loft-Environment-Monitor.png)
 
 ## Installation
+0. Construct the circuits for some/all of the sensors and the LEDs.
 1. Create an Arduino sketch folder called ``Loft-Monitor``.
 2. Copy ``Loft-Monitor.ino`` into the sketch folder just created.
 3. Fire up the Arduino IDE, and install the pre-requesite libraries (as necessary).
 4. Open the ``Loft-Monitor.ino`` sketch and enable/disable the sensors and features you want.
 5. Compile and download the code to your Arduino Nano.
 6. Capture the environment data with a serial comms app you like. I like and use [CoolTerm](http://freeware.the-meiers.org/).
+7. Leave it running, collecting data for as long as you need.
 
 ## Usage Example
 ![](Loft-Monitor-v101-CompileDownload.png)
 
+![](SerialMon-TestDataDisplay.png)
+
 ![](CoolTerm-DataCapture.png)
 
 ## Pre-Requesites
+You will need to connect up some sensors and LEDs.
+
+![](Loft-Monitor-CircuitsP1.png)
+![](Loft-Monitor-CircuitsP2.png)
+
 As is common for most Arduino sketches, several libraries must be included in the sketch to easily access the various sensors.
 
 ```
